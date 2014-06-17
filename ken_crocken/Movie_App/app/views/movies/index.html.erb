@@ -1,0 +1,12 @@
+<h1>Welcome to RetFlix!</h1>
+<h2>See our collection of movies below.</h2>
+
+<% if flash[:success] %>
+    <div><h2><%= flash[:success] %></h2></div>
+<% end %>
+
+<%= render partial: 'search_movie' %>
+
+<%= render partial: 'display' %>
+
+

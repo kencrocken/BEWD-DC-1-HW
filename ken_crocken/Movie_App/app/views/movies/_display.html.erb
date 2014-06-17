@@ -1,0 +1,9 @@
+<% @my_movies.each do |movie| %>
+  <ul>
+    <li><h3><%= movie.title%></h3> (<%= movie.year_released %>)<% if !movie.rating.nil? %> | Rating: <%= movie.rating %><% end %></li> 
+    <p><%= movie.description %> |  <%= link_to "show", movie_path(movie) %> <%= link_to "edit", edit_movie_path(movie) %> <%= link_to "delete", movie, method: :delete,
+                                  data: { confirm: "You sure?" } %></p>
+  </ul>
+<% end %>
+
+<h4><%= link_to 'Return to All Movies', root_path %> | <%= link_to 'Add a Movie', new_movie_path %></h4></h4>

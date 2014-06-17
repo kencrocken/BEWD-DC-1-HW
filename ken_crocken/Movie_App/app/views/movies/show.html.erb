@@ -1,0 +1,7 @@
+<h1>Your Movie:</h1>
+
+<h2><%= "#{@movie.title}" %></h2>
+  <p><%= "#{@movie.rating}" %> </p>
+  <p><%= "#{@movie.description}" %><p>
+  <p> Released: <%= "#{@movie.year_released}" %></p>
+  <h4><%= link_to 'Return to All Movies', root_path %></h4>

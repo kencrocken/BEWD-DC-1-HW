@@ -1,0 +1,9 @@
+<h1>My Shirts!</h1>
+
+<%= render partial: 'search_shirt' %>
+
+<% @my_shirts.each do |shirt| %>
+  <ul>
+    <li><%= "#{shirt.name} : #{shirt.description}" %> | <%= link_to "edit", edit_shirt_path(shirt) %></li>
+  </ul>
+<% end %>
