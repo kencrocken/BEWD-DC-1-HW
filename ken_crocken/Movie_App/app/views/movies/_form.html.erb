@@ -27,5 +27,15 @@
   <%= f.text_field :rating %>
 </div>
   <%= f.submit %>
+  <!--
+    This form works, but I had to fill it out a few times before I could
+    bypass the error handling.
+
+    Because the inputs are [type="text"] when you use `f.text_field`, there
+    is no client-side validation.
+
+    Try using the other available form input types - http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html
+  -->
+ 
 
 <% end %>
