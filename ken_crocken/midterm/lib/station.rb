@@ -67,4 +67,8 @@ class Station
     end
   end
 
+  # Ken, you nailed this assignment! This is so cool. You should create
+  # a new repo on github for this app and create a ruby gem so others can use it!
+  # - http://guides.rubygems.org/make-your-own-gem/
+
 end
