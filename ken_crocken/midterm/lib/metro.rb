@@ -7,7 +7,7 @@ class Metro
   def initialize
     @response_metro_lines = JSON.parse(RestClient.get "http://api.wmata.com/Rail.svc/json/JLines?api_key=n2z9aq3redes6k7jekjfzk8q")
     @metro_incidents = JSON.parse(RestClient.get "http://api.wmata.com/Incidents.svc/json/Incidents?api_key=n2z9aq3redes6k7jekjfzk8q")
-    @line_color = line_color
+    @line_color = line_color # nice use of colors in your app!!
     @check = []
   end
 
@@ -56,7 +56,7 @@ class Metro
 
   def check(line_color)
     if !@check.include?(line_color)
-      puts "Sorry, I don't understand."
+      puts "Sorry, I don't understand." # nice validation
       get_metro_lines
     else
       get_metro_line(line_color)
@@ -85,5 +85,7 @@ class Metro
 
     puts color.get_metro_stations(line)
   end
+  # Maybe you could create variables or functions to handle the color
+  # coding so the strings don't look so cryptic above.
 
 end
